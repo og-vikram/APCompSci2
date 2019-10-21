@@ -15,16 +15,17 @@ public class Main {
 			System.out.println("This doesn't need shortening!");
 		}else{
 			word = word.toLowerCase();
-			for(int i = 1; i <word.length(); i++){
+			for(int i = 0; i <word.length(); i++){
 				if(i==0){
-					nWord = "" + word.substring(0);	
+					nWord = "" + word.substring(0,1);	
 				}
 				else if(word.charAt(i-1) == ' '){
 					nWord = nWord + word.charAt(i);
 				}else if(word.charAt(i-1) == word.charAt(i) 
 						&& word.charAt(i)!= 'a'&& word.charAt(i)!= 'e'
 						&& word.charAt(i)!= 'i'&& word.charAt(i)!= 'o'
-						&& word.charAt(i)!= 'u'){
+						&& word.charAt(i)!= 'u')
+				{
 				doubleLetters++;
 				}
 				else{
@@ -32,16 +33,13 @@ public class Main {
 					   word.charAt(i) != 'i'&& word.charAt(i) != 'o' &&
 					   word.charAt(i) != 'u')
 					{
-					   nWord = nWord + word.charAt(i);
-						
+					   nWord = nWord + word.charAt(i);	
 					}
 					else{
 						vowel++;
 					}
-				}
-					
+				}	
 			}
-			
 			System.out.println("Shortened message: " + nWord);
 			System.out.println("Repeated letters removed: " + doubleLetters);
 			System.out.println("Vowels removed: " + vowel);
