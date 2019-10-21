@@ -10,18 +10,13 @@ public class les22act2 {
 			String word = bot.nextLine();
 			int length = word.length();
 			int x =0;
-			int y = 0;
+			String space = "";
 			while(x<length){
 					
-				while(y<length){
-					System.out.print("\t");
+			
+				System.out.println(space + word.charAt(x));
 					
-					y++;
-				}
-				
-				System.out.println(word.charAt(x));
-					
-					
+				space = space + "\t";
 				
 				x++;
 				
