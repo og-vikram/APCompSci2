@@ -45,34 +45,29 @@ public class Ass5 {
 			Arrays.sort(newArray);
 			
 			System.out.println("The range is " + (newArray[newArray.length-1] - newArray[0]));
-			
-			boolean flag1 = true; 
+
+			boolean flag1 = true;
 			boolean flag2 = true;
-			
-		/*	for(int m =1; m<arrayLength; m++){
-				if(array[m-1] > array[m] && flag1 == true){
-					flag2 = false;
+
+			for(int i = 0; i<arrayLength; i++){
+				if(array[i-1] >array[i]){
+					flag1 = false;
 				}
-				
-				}
-				if(array[m-1] < array[m] && flag2 == true){
-					flag2=true;
+				if(array[i-1] < array[i]){
+					flag2 = true;
 				}
 			}
-			if(flag1==true){
-				
-				System.out.println("The array is sorted in decreasing order");
+			if(flag1 = false){
+				System.out.println("Your array is sorted in decreasing order");
 			}
-			else if(flag2==true){
-				
-				System.out.println("The array is in increasing order");
+			else if(flag2 = false){
+				System.out.println("Your array is sorted in increasing order");
 			}
 			else{
-				System.out.println("The array is unsorted");
+				System.out.println("Your array is unsorted");
 			}
-			*/
 		}
-		
+
 		
 	}
 
