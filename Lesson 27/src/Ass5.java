@@ -41,26 +41,23 @@ public class Ass5 {
 			}
 			System.out.println("The average is " + average/arrayLength);
 			
-			double[] newArray = Arrays.copyOf(array, array.length);
-			Arrays.sort(newArray);
+//range
 			
-			System.out.println("The range is " + (newArray[newArray.length-1] - newArray[0]));
-
 			boolean flag1 = true;
 			boolean flag2 = true;
 
 			for(int i = 0; i<arrayLength; i++){
-				if(array[i-1] >array[i]){
+				if(array[i] <=array[i]){
 					flag1 = false;
 				}
-				if(array[i-1] < array[i]){
-					flag2 = true;
+				if(array[i] <= array[i+1]){
+					flag2 = false;
 				}
 			}
-			if(flag1 = false){
+			if(flag1 == false){
 				System.out.println("Your array is sorted in decreasing order");
 			}
-			else if(flag2 = false){
+			if(flag2== true){
 				System.out.println("Your array is sorted in increasing order");
 			}
 			else{
