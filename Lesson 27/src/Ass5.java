@@ -41,28 +41,37 @@ public class Ass5 {
 			}
 			System.out.println("The average is " + average/arrayLength);
 			
-//range
+			//range
+			double min = 2147483647;
+		    double max = -2147483647;
+		    double range = 0;
+		    
+			for(int i =0; i<array.length; i++){
+				if(array[i]>max){
+		            max = array[i];
+		          }
+		          if(array[i]<min){
+		            min = array[i];
+		          }
+		          range = max - min;
+			}
+			String inc="";
+			String dec="";
 			
-			boolean flag1 = true;
-			boolean flag2 = true;
-
-			for(int i = 0; i<arrayLength; i++){
-				if(array[i] <=array[i]){
-					flag1 = false;
-				}
-				if(array[i] <= array[i+1]){
-					flag2 = false;
-				}
-			}
-			if(flag1 == false){
-				System.out.println("Your array is sorted in decreasing order");
-			}
-			if(flag2== true){
-				System.out.println("Your array is sorted in increasing order");
-			}
-			else{
-				System.out.println("Your array is unsorted");
-			}
+			for(int d=1; d<array.length; d++){
+		          if(array[d]>=array[d-1]){
+		            inc = "The array is sorted in increasing order";
+		          }else if(array[d]<=array[d-1]){
+		            dec = "The array is sorted in decreasing order";
+		        }
+		      }
+			
+		      System.out.println("The range is " + range);
+		      if(inc != "" && dec != ""){
+		        System.out.println("The array is unsorted");
+		      }else{
+		        System.out.println(inc + dec);
+		      }
 		}
 
 		
