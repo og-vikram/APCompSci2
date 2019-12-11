@@ -4,17 +4,18 @@ public class questions {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-			
-		String reverse = "";
 		
 		for(int i=0; i<list.length; i++){
-			for(int j=list.length; j>=0; j++){
+			
+			for(int j=0; j<list[i].length(); j++){
+				if(list[i].charAt(j) == ' '){
+				list[i]=list[i].substring(0,j) + list[i].substring(j+1) ;
+				}
 				
-				reverse = reverse + list[i].charAt(j);
 			}
-			System.out.println(reverse);
-		
+			
 		}
+		
 		
 	}
 	
