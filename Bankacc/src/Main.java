@@ -13,20 +13,26 @@ public class Main {
 
 	public void mainMenu() {
 		String choice = "";
-		do {
+		while (!choice.equals("5")) {
 			printHeader();
 			choice = bot.nextLine();
-			if (choice.equals("1")) {
+			switch(choice){
+			case "1": 
 				login();
-			} else if (choice.equals("2")) {
+				break;
+			case "2":
 				create();
-			} else if (choice.equals("3")) {
+				break;
+			case "3":
 				list();
-			} else if (choice.equals("4")) {
+				break;
+			case "4":
 				delete();
+				break;
+				
 			}
 		}
-		while (!choice.equals("5")); 
+		
 	}
 
 	public void login() {
